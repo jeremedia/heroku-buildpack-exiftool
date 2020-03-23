@@ -16,7 +16,7 @@ BUILDPACK_DIR=`cd $(dirname $0)/..; pwd`
 RSSFEED_URL="http://owl.phy.queensu.ca/~phil/exiftool/rss.xml"
 # TARBALL_URL is hardcoded because rss.xml gives no tarball URL for the production release right now...
 #TARBALL_URL="$(curl -s -o - "$RSSFEED_URL" | perl -ne 'if (!$got && (/\<title\>.+production release.+\<\/title\>/i .. /\<\/item\>/) && /enclosure.+(http.+\.tar\.gz)/) {print $1; $got = 1}')"
-TARBALL_URL="http://stuff.jeremedia.com/000109aaf5f7/download/Image-ExifTool-11.92.tar.gz"
+TARBALL_URL="http://stuff.jeremedia.com/e7f0935a7c4b/download/Image-ExifTool-11.92.tar.gz"
  RENAME_DIR="$(echo "$TARBALL_URL" | perl -ne '/.+\/(.+)\.tar\.gz/ && print $1')"
  VERSION_NO="$(echo "$RENAME_DIR"  | perl -ne '/ExifTool-(.+)$/i   && print $1')"
 
